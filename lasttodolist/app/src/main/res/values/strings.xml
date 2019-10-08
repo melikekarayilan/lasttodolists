@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">lasttodolist</string>
+
+
+    <string-array name="listemeTipleri">
+        <item>All lists</item>
+        <item>Incompleted List</item>
+        <item>Completed List</item>
+        <item>Expired List</item>
+        <item>Name</item>
+    </string-array>
+
+    <string name="filterStatus">Filter by status</string>
+</resources>

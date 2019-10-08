@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_filtreleme"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/tv_filtreleme"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="Orders:"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/liste_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            app:layout_constraintLeft_toRightOf="@+id/tv_filtreleme"></Spinner>
+
+        <TextView
+            android:id="@+id/tv_add_new_item"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_background"
+            android:gravity="center"
+
+            android:text="Add new item"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/liste_spinner" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_background"
+            app:layout_constraintTop_toBottomOf="@id/tv_add_new_item">
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/search" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/img_search"
+                android:background="@android:color/transparent"
+                android:hint="Search"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1" />
+        </RelativeLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/lv_list_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/cl_filtreleme" />
+</android.support.constraint.ConstraintLayout>
